@@ -50,6 +50,7 @@ const App = () => {
                 <main
                   style={{
                     flex: 1,
+                    paddingLeft: '240px',
                     minHeight: '100vh',
                     background: 'var(--color-surface)',
                   }}

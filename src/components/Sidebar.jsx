@@ -72,7 +72,7 @@ const Sidebar = ({ user, onLogout }) => {
   const filteredNavItems = NAV_ITEMS.filter(item => {
     if (!user) return false;
     if (user.role?.toLowerCase() === 'admin') return true;
-    
+
     // Check if item permission key exists in the user's role string (comma-separated or just string)
     const permissions = user.role?.toLowerCase().split(',').map(p => p.trim()) || [];
     return permissions.includes(item.permission?.toLowerCase());
@@ -127,7 +127,7 @@ const Sidebar = ({ user, onLogout }) => {
         </div>
         <div style={{ overflow: 'hidden', whiteSpace: 'nowrap' }}>
           <div style={{ fontSize: '1rem', fontWeight: '800', color: 'var(--color-text-deep)', letterSpacing: '0.05em' }}>PMS</div>
-          <div style={{ fontSize: '0.65rem', color: 'var(--color-text-muted)', fontWeight: '600' }}>Performance Management</div>
+          <div style={{ fontSize: '0.65rem', color: 'var(--color-text-muted)', fontWeight: '600' }}>Performance Management System</div>
         </div>
       </div>
 
@@ -158,8 +158,8 @@ const Sidebar = ({ user, onLogout }) => {
                 position: 'relative'
               }}
             >
-              <span style={{ 
-                flexShrink: 0, 
+              <span style={{
+                flexShrink: 0,
                 display: 'flex',
                 transition: 'transform 0.3s ease',
                 transform: isActive ? 'scale(1.1)' : 'scale(1)',
@@ -188,7 +188,7 @@ const Sidebar = ({ user, onLogout }) => {
           <div style={{ fontSize: '0.85rem', fontWeight: '800', color: 'var(--color-text-deep)' }}>{user?.name || 'User'}</div>
           <div style={{ fontSize: '0.65rem', color: 'var(--color-primary)', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.05em' }}>{user?.role || 'Guest'}</div>
         </div>
-        
+
         <button
           onClick={onLogout}
           className="btn-logout"
