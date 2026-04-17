@@ -112,60 +112,69 @@ export const EXECUTION_TASKS = [
 
 // --- SIDEBAR NAVIGATION ---
 export const NAV_ITEMS = [
-  { path: '/',                label: 'Dashboard',       icon: 'dashboard' },
-  { path: '/bookings',        label: 'Bookings',        icon: 'booking' },
+  { path: '/',                label: 'Dashboard',       icon: 'dashboard', permission: 'dashboard' },
+  { path: '/bookings',        label: 'Bookings',        icon: 'booking',   permission: 'bookings' },
   { 
     path: '/menu-finalize',   
     label: 'Menu Finalize',   
     icon: 'menu',
+    permission: 'menu-finalize',
     mapping: { planned: 8, actual: 9, status: 11, file: 12 }
   },
   { 
     path: '/vendor-finalize', 
     label: 'Vendor Finalize', 
     icon: 'vendor',
+    permission: 'vendor-finalize',
     mapping: { planned: 13, actual: 14, status: 16, file: 17 }
   },
   { 
     path: '/inform-chef',     
     label: 'Inform to Chef',  
     icon: 'chef',
+    permission: 'inform-chef',
     mapping: { planned: 18, actual: 19, status: 21, file: null }
   },
   { 
     path: '/tag-prints',      
     label: 'Tag Prints',      
     icon: 'tag',
+    permission: 'tag-prints',
     mapping: { planned: 22, actual: 23, status: 25, file: null }
   },
   { 
     path: '/outsource-vendor', 
     label: 'Outsource Vendor', 
     icon: 'vendor_update',
+    permission: 'outsource-vendor',
     mapping: { planned: 26, actual: 27, status: 29, file: null }
   },
   { 
     path: '/material-arrangement', 
     label: 'Material Arrangement', 
     icon: 'material',
+    permission: 'material-arrangement',
     mapping: { planned: 30, actual: 31, status: 33, file: null }
   },
   { 
     path: '/crockery-list', 
     label: 'Crockery List', 
     icon: 'crockery',
+    permission: 'crockery-list',
     mapping: { planned: 34, actual: 35, status: 37, file: null }
   },
   { 
     path: '/decor-list', 
     label: 'Decor List', 
     icon: 'decor',
+    permission: 'decor-list',
     mapping: { planned: 38, actual: 39, status: 41, file: null }
   },
   { 
     path: '/final-outsource', 
     label: 'Final Outsource', 
     icon: 'truck',
+    permission: 'final-outsource',
     mapping: { planned: 42, actual: 43, status: 45, file: null }
   },
 ];
